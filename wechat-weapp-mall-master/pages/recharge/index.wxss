@@ -1,0 +1,78 @@
+@import '/style/layout.wxss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.discount_list {
+  background-color: white
+}
+
+.discount_item {
+  width: 100%;
+  height: 45pt;
+  position: relative;
+  display: flex;
+  align-items: center;
+   border-bottom: 1px solid #dadada; 
+  align-content: row;
+} 
+
+.discount_content {
+  width: 30%;
+  color: #2D2D2D;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.discount_line {
+  width: 1pt;
+  height: 80%;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+  background-color: #dadada;
+}
+
+.discount_price {
+  width: 60%;
+  color: #CD9967;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.seller_id {
+  margin-top: 20pt;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #CD9967; 
+  padding-bottom: 20pt;
+  padding-top: 20pt;
+}
+
+.info {
+  margin-left: 10pt;
+  margin-bottom: 5pt;
+  margin-right: 10pt;
+  background-color: #CD9967;
+  color: white;
+}
+
+.account_id_input {
+  width: 90%;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  height: 50px;
+  background-color: white;
+  padding-left: 5pt;
+}
+
+
+
+
+
+

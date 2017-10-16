@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/store/index",
+    "pages/recharge/index",
+    "pages/my/index",
+    "pages/price/index",
+    "pages/info/index",
+    "pages/download/index",
+    "pages/apply2/index",
+    "pages/apply1/index",
+    "pages/offical/index",
+    "pages/mystore/index",
+    "pages/seller/index",
+    "pages/person/index",
+    "pages/personsetting/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "壹零捌",
+    "navigationBarBackgroundColor": "#292929",
+    "backgroundColor": "#F2f2f2",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#B6B6B6",
+    "selectedColor": "#CC9A67",
+    "borderStyle": "#E2E2E2",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tab_home.png",
+        "selectedIconPath": "images/tab_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/store/index",
+        "iconPath": "images/tab_store.png",
+        "selectedIconPath": "images/tab_store_selected.png",
+        "text": "店铺"
+      },
+      {
+        "pagePath": "pages/recharge/index",
+        "iconPath": "images/tab_recharge.png",
+        "selectedIconPath": "images/tab_recharge_selected.png",
+        "text": "充值"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/tab_me.png",
+        "selectedIconPath": "images/tab_me_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

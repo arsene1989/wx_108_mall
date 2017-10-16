@@ -1,0 +1,53 @@
+@import '/style/layout.wxss';
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #EEEEEE;
+  color: #939393;
+}
+
+.price_item {
+  width: 100%;
+  height: 60pt;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dadada;
+  background-color: #FFFFFF;
+} 
+.price_image {
+  /* position: absolute; */
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 15pt;
+}
+.price_input {
+  margin-left: 80pt;
+  padding-left: 5pt;
+  background-color: #EEEEEE;
+  width: 100pt;
+  border-radius: 5pt;
+  height: 30pt;
+}
+.price_rmb {
+  margin-left: 5pt;
+}
+
+.confirm {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 100%;
+  height: 60pt;
+}
+
+.box_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF; 
+}
+
+
+

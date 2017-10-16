@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+
+        <swiper class="activitys" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange"
+                circular='true'>
+            <block wx:for="{{activities}}">
+                <swiper-item style="background:url({{item}});background-repeat: no-repeat;background-size:100% 200px; ">
+                </swiper-item>
+            </block>
+        </swiper>
+
+<view class='box_container'>
+    <text>{{information}}</text>
+</view>
+    
+<view class='download_container'  bindtap="to_download">下载专区</view>
+</view>

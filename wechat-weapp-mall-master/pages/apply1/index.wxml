@@ -1,0 +1,16 @@
+<view class="container">
+   <view class="userinfo">
+    <view class="userinfo-avatar-background">
+    <image class="userinfo-avatar" 
+             src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+   </view>
+
+   
+<view class="infomation">
+<text>您可一键申请为一级店铺店长</text>
+</view>
+
+  <button bindtap='applyForOne' class='apply_button'>提 交</button>
+
+</view>

@@ -1,0 +1,19 @@
+/* pages/apply1/index.wxss */
+@import '/style/layout.wxss';
+.container {
+  background-color: #F2f2f2;
+}
+
+.infomation {
+  margin-top: 60%;
+  margin: 10%;
+  color: #CD9967;
+}
+
+.apply_button {
+  width: 80%;
+  bottom: 10%;
+  background-color: black;
+  color: #CD9967;
+}
+

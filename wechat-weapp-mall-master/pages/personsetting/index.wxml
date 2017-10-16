@@ -1,0 +1,27 @@
+<view class='container'>
+
+ <form bindsubmit="save_person_info">
+     <view class="info_cell">
+        <text class="info_title">真实姓名</text>
+        <input class="info_content" name="name" placeholder= "请输入您的姓名" maxlength="20" value='{{name}}'></input>
+    </view>
+
+    <view class="info_cell" >
+        <text class="info_title">身份证ID</text>
+        <input class="info_content" name="cert"  placeholder= "请输入您的身份证号码" maxlength="18" value='{{cert}}'></input>
+    </view>
+
+    <view class="info_cell">
+        <text class="info_title" >银行卡号</text>
+        <input class="info_content" name="bank" placeholder= "请输入您的银行卡号" type="number" maxlength="19" value='{{bank_account}}'></input>
+    </view>
+
+    <view class="info_cell">
+        <text class="info_title" >手机号码</text>
+        <input class="info_content" name="phone"  placeholder= "请输入您的手机号码" type="number" maxlength="11" value='{{telephone}}'></input>
+    </view>
+    
+    <button class="black_button" formType="submit">保 存</button>
+</form>
+
+</view>

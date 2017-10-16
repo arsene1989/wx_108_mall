@@ -1,0 +1,56 @@
+<view class="container">
+   
+  <block wx:if="{{store_level==0}}"> 
+    <view class='mystore_container' bindtap='to_apply_two'>您还不是店长</view>
+
+    <view class='box_container'>
+       <text class='rule_title'>规则说明</text>
+
+       <view class='rule_line'></view>
+
+       <text class='rule_content'>{{rule}}</text>
+    
+    </view>
+
+    <button class='black_button' bindtap='to_apply_two'>去申请</button>
+
+    <view style='height:25pt;'></view>
+
+   </block>
+
+   <block wx:else>
+
+     <view class='mystore_container' bindtap='to_mystore'>我的店铺</view>
+
+    <view class='assert_container' bindtap='to_mystore'>
+
+ <view class='assert_item'>
+
+     <image class= 'assert_image' src='../../images/me_coin.png' mode='widthFix'></image>
+     
+     <text>{{coin_count}}</text>
+ 
+</view>
+
+<view class='assert_line'></view>
+  
+<view class='assert_item'>
+     <image class= 'assert_image' src='../../images/me_diamond.png' mode='widthFix' ></image>
+     
+     <text>{{diamond_count}}</text>
+  </view>
+
+  </view>
+
+   <view class='button_container'>
+
+    <button  class='black_button' bindtap='to_offical'>进 货</button>
+     
+   <block class='default' wx:if="{{store_level==2}}"> 
+    <button class='gold_button' bindtap='to_apply_one'>申请一级店铺</button>
+    </block>
+
+  </view>
+   </block>
+
+</view>

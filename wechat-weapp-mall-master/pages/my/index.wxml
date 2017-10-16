@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="userinfo">
+   <view class="userinfo-avatar-background">
+    <image class="userinfo-avatar" 
+             src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+    <text class="userinfo-nickname">
+        {{userInfo.nickName}}</text>
+  </view>
+
+  <block wx:if="{{store_level==0}}"> 
+    
+    <view class='download_container' bindtap='to_download'>欢迎下载壹零捌</view>
+
+   </block>
+
+   <block wx:else>
+<view class='assert_container'>
+
+ <view class='assert_item'>
+
+     <image class= 'assert_image' src='../../images/me_coin.png' mode='widthFix'></image>
+     
+     <text>{{coin_count}}</text>
+ 
+</view>
+
+<view class='assert_line'></view>
+  
+<view class='assert_item'>
+     <image class= 'assert_image' src='../../images/me_diamond.png' mode='widthFix' ></image>
+     
+     <text>{{diamond_count}}</text>
+  </view>
+
+  </view>
+
+    </block>
+
+<view class='setting_container'>
+
+
+ <block wx:if="{{store_level > 0}}"> 
+    
+    <view class='setting_item' bindtap='to_person'>
+   <text class='setting_text'>个人资料</text>
+   <image class='arrow' mode='widthFix'
+   src='../../images/arrow.png'></image>
+</view>
+
+</block>
+
+<view class='setting_line'></view>
+
+<view class='setting_item' bindtap='to_about_us'>
+   <text class='setting_text'>关于我们</text>
+   <image class='arrow' mode='widthFix'
+   src='../../images/arrow.png'></image>
+</view>
+</view>
+
+</view>

@@ -1,0 +1,49 @@
+<view class="container"> 
+<text class='title'>我的库存</text>
+
+<view class= "goods_list">
+<block wx:for="{{goods_info}}" xw:for-item="item">
+
+<view class="goods_item">
+    
+  <image class="goods_image" src="{{item.icon}}"></image>
+
+  <view class="goods_number">
+      剩余:{{item.count}}
+  </view> 
+
+  <view class="goods_price">
+      {{item.price}}元/个
+  </view> 
+
+ </view>
+ </block>
+</view>
+
+<view class="price_setting">
+ <button class="price_button" bindtap="toPriceSetting">自定义价格</button> 
+</view>
+
+<text class='title'>交易记录</text>
+
+<block wx:if="{{transactions.length>0}}">
+
+<scroll-view scroll-y class="transactions" >
+<block wx:for="{{transactions}}" xw:for-item="item">
+
+<view class="transaction_record">
+    
+  <view class="transaction_info">{{item.date}}{{item.buyer}}花费{{item.amount}}元得到{{item.diamond}}个砖石/{{item.coin}}个金币</view>
+ </view>
+ </block>
+</scroll-view>
+
+</block>
+
+<block wx:else> 
+
+<view class='empty_container'>空空如也~</view>
+
+</block>
+
+</view>

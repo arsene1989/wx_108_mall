@@ -1,0 +1,42 @@
+<view class="container">
+　 <view>商品列表</view>
+
+    <form bindsubmit="payToSeller">
+      <view class= "info_list">
+<block wx:for="{{goods_info}}" xw:for-item="item" wx:for-index="index">
+
+<view class="goods_item">
+    <image class="goods_image" src="{{item.goods_image}}"></image>
+    
+    <view class="price">
+      {{item.goods_price}} 元/个
+  </view>  
+
+  <view class="stepper">  
+    <!-- 减号 -->  
+    <image class="{{item.status}}" bindtap="goodsMinus" data-index="{{index}}" src="../../images/minus.png" mode="widthFix"></image>
+    <!-- 数值 -->     
+    <view type="number" class="{{item.count_status}}" data-index="{{index}}" >{{item.goods_count}}
+    </view> 
+    <!-- 加号 -->  
+    <image class="normal" bindtap="goodsPlus" data-index="{{index}}" src="../../images/plus.png" mode="widthFix"></image>
+</view> 
+
+ </view>
+ </block>
+</view>
+
+  <view class='summary'>
+
+<view class='statistics'>
+
+<image class='shopping' src='../../images/shopping.png' mode='widthFix'></image> 
+
+<text class='statistics_text'>￥: {{summary}}</text>
+
+</view>
+
+<button class="pay" formType="submit" >支付</button>
+</view>
+</form>
+</view>

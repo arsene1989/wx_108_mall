@@ -1,0 +1,38 @@
+<!--pages/apply2/index.wxml-->
+<view class="container">
+   <view class="userinfo">
+   <view class="userinfo-avatar-background">
+    <image class="userinfo-avatar" 
+             src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+   </view>
+
+   <form bindsubmit="applyForTwo">
+     <view class="info_cell">
+        <text class="info_title">真实姓名</text>
+        <input class="info_content" name="name" placeholder= "请输入您的姓名" maxlength="20"></input>
+    </view>
+
+    <view class="info_cell" >
+        <text class="info_title">身份证ID</text>
+        <input class="info_content" name="cert"  placeholder= "请输入您的身份证号码" maxlength="18"></input>
+    </view>
+
+    <view class="info_cell">
+        <text class="info_title" >银行卡号</text>
+        <input class="info_content" name="bank" placeholder= "请输入您的银行卡号" type="number" maxlength="19"></input>
+    </view>
+
+    <view class="info_cell">
+        <text class="info_title" >手机号码</text>
+        <input class="info_content" name="phone"  placeholder= "请输入您的手机号码" type="number" maxlength="11"></input>
+    </view>
+    
+    <view class='box_container'>
+    <text class='infomation'>充值满累积满600元并成功提交个人信息，即可成为壹零捌二级店铺的店长</text>
+    </view>
+    
+    <button class="apply" formType="submit">提 交</button>
+</form>
+
+</view>

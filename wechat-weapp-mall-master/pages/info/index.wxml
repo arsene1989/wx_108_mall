@@ -1,0 +1,15 @@
+<view class="container">
+
+
+<view class='box_container'> 
+    <text>热线电话</text>
+    <view bindtap="calling"> {{service_phone}}
+    </view>
+
+    <text>电子邮件</text>
+    <view>{{email}} </view>
+    
+    <text>版权所有:深圳壹零捌网络科技有限公司</text>
+</view>
+
+</view>

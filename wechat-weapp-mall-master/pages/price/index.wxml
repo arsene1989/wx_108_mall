@@ -1,0 +1,32 @@
+<view class="container">
+    <form bindsubmit="sumbit_price">
+
+<view class="price_item">
+    
+  <image class="price_image" src="{{coin_icon}}"></image>
+ 
+   <input class="price_input" value="{{coin_price}}" name="coin_price" type="digit" placeholder='请输入单价'></input>
+
+  <view class="price_rmb">
+      元
+  </view> 
+ </view>
+
+ <view class="price_item">
+    
+  <image class="price_image" src="{{diamond_icon}}"></image>
+ 
+   <!-- <view class="price_input"> -->
+   <input class="price_input" value="{{diamond_price}}" name="diamond_price" type="digit" placeholder='请输入单价'></input>
+   <!-- </view>  -->
+
+  <view class="price_rmb">
+      元
+  </view> 
+ </view>
+
+    <view class="confirm">
+        <button class='black_button' formType="submit" >保 存</button>
+    </view>
+  </form>
+</view>

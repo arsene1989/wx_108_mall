@@ -1,0 +1,55 @@
+@import '/style/layout.wxss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.item_box {
+  display: flex;
+  flex-direction: column;
+  padding: 100rpx 0;
+  width: 100%;
+  height: 30%;
+  align-items: center;
+  background: #E1FFAF;
+}
+
+.box_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  flex-direction: column;
+  padding: 5pt;
+  margin: 5pt;  
+}
+
+.rule_title {
+  color: #CD9967;
+  font-size: 18pt;
+}
+
+.rule_line {
+  background-color: #CD9967;
+  height: 1pt;
+  width: 95%;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+}
+
+.rule_content {
+  color: black;
+  font-size: 14pt;
+}
+
+.button_container {
+  margin-top: 75pt;
+  margin-bottom: 25pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+

@@ -1,0 +1,24 @@
+@import '/style/layout.wxss';
+.container {
+  background-color: #F2f2f2;
+}
+
+.infomation {
+  margin: 10%;
+  font-size: 10pt;
+  color: #CD9967;
+}
+
+.apply {
+  margin-top: 25pt;
+  height:100rpx;
+  width: 80%;
+  background-color: black;
+  color: #CD9967;
+}
+
+.box_container {
+  padding: 5pt;
+  margin: 5pt;  
+}
+

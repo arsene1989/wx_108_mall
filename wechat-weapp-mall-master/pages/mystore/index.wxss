@@ -1,0 +1,88 @@
+/* pages/mystore/index.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #EEEEEE;
+  color: #939393;
+}
+
+.title {
+  margin: 5pt;
+}
+
+.goods_item {
+  width: 100%;
+  height: 45pt;
+  position: relative;
+  display: flex;
+  align-items: center;
+   border-bottom: 1px solid #dadada; 
+  align-content: row;
+} 
+.goods_image {
+  /* position: absolute; */
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 10pt;
+}
+.goods_number {
+  margin-left: 5%;
+  width: 20%;
+  text-align: right;
+  color: #2D2D2D;
+}
+.goods_price {
+  margin-left: 20%;
+  width: 30%;
+  text-align: right;
+  color: #2D2D2D;
+}
+
+.price_setting {
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 50pt;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.transactions {
+  /* bottom:0rpx; 
+  position:fixed; */
+  width: 100%;
+}
+.transaction_record {
+  width: 100%;
+  height: 38pt;
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: row;
+  border-bottom: 1px solid #dadada;
+  background-color: #FFFFFF;
+}
+.transaction_info {
+  margin-left: 0%;
+}
+
+.goods_list {
+  background: #FFFFFF
+}
+
+.price_button {
+  width: 120pt;
+  height: 30pt;
+  color: #CD9967;
+  background-color: black;
+  border-radius: 15pt;
+}
+
+.empty_container {
+  width: 100%;
+  height: 150pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
