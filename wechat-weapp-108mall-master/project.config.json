@@ -9,7 +9,8 @@
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
 	"appid": "wx378329483ce38951",
-	"projectname": "MALL",
+	"projectname": "108Mall",
+	"miniprogramRoot": "./",
 	"condition": {
 		"weapp": {
 			"current": -1,
