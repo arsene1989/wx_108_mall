@@ -174,10 +174,14 @@ minusStatus: 'disabled',
 
         },
         "fail": function (res) {
-          wx.showModal({
-            title: '支付失败',
-            content: '',
-            showCancel: false
+          // wx.showModal({
+          //   title: '支付失败',
+          //   content: '',
+          //   showCancel: false
+          // })
+
+          wx.navigateTo({
+            url: '../paysuccess/index',
           })
 
         },

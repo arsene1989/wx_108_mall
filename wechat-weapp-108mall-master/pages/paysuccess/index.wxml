@@ -1,0 +1,8 @@
+<view class="container">
+
+<image class='success' src='../../images/success.png' mode='widthFix'></image>
+
+<text class='congraduation'>恭喜你</text>
+<text class='pay_success'>支付成功</text>
+
+</view>

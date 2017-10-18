@@ -13,7 +13,8 @@
     "pages/mystore/index",
     "pages/seller/index",
     "pages/person/index",
-    "pages/personsetting/index"
+    "pages/personsetting/index",
+    "pages/paysuccess/index"
   ],
   "window": {
     "backgroundTextStyle": "white",
