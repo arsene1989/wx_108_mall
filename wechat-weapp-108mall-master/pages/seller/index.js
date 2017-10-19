@@ -165,13 +165,19 @@ Page({
         "signType": "MD5",
         "paySign": "",
         "success": function (res) {
+          wx.navigateTo({
+            url: '../paysuccess/index',
+          })
 
         },
         "fail": function (res) {
-          wx.showModal({
-            title: '😯 支付失败',
-            content: '请稍后再试',
-            showCancel: false
+          // wx.showModal({
+          //   title: '😯 支付失败',
+          //   content: '请稍后再试',
+          //   showCancel: false
+          // })
+          wx.navigateTo({
+            url: '../paysuccess/index',
           })
         },
         "complete": function (res) {
