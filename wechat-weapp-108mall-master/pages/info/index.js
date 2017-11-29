@@ -2,10 +2,9 @@ var app = getApp()
 Page({
   data: {
     userInfo: {},
-    service_phone:'0599-2321108',
-    email:'yilingba_108@163.com',
-    coins:60,
-    diamond:289
+    wx:'wx_108',
+    qq:'1918108108',
+    email:'yilingba_108@163.com'
   },
 
   onLoad: function () {
@@ -19,15 +18,4 @@ Page({
     })
   },
 
-  calling: function () {
-    wx.makePhoneCall({
-      phoneNumber: '0599-2321108', 
-      success: function () {
-        console.log("拨打电话成功！")
-      },
-      fail: function () {
-        console.log("拨打电话失败！")
-      }
-    })
-  }
 })

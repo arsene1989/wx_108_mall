@@ -42,6 +42,8 @@
 
   </view>
 
+<view class='line'></view>
+<view class='money_info' bindtap='to_money'>账户余额</view>
    <view class='button_container'>
 
     <button  class='black_button' bindtap='to_offical'>进 货</button>

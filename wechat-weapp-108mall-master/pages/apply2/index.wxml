@@ -24,12 +24,17 @@
     </view>
 
     <view class="info_cell">
+        <text class="info_title" >开户网点</text>
+        <input class="info_content" name="open" placeholder= "请输入您的银行开户网点" type="number" maxlength="100"></input>
+    </view>
+
+    <view class="info_cell">
         <text class="info_title" >手机号码</text>
         <input class="info_content" name="phone"  placeholder= "请输入您的手机号码" type="number" maxlength="11"></input>
     </view>
     
     <view class='box_container'>
-    <text class='infomation'>充值满累积满600元并成功提交个人信息，即可成为壹零捌二级店铺的店长</text>
+    <text class='infomation'>充值满累积满600元并成功提交个人信息，即可成为壹零捌二级店铺的店长。请填写真实个人信息，确保提现金额能够准确入账。</text>
     </view>
     
     <button class="apply" formType="submit">提 交</button>

@@ -42,6 +42,8 @@ App({
     telephone: "",
     name: "",
     cert: "",
-    bank_account: ""
+    bank_account: "",
+    bank_open:"",
+    money:""
   }
 })

@@ -2,8 +2,13 @@
 
 
 <view class='box_container'> 
-    <text>热线电话</text>
-    <view bindtap="calling"> {{service_phone}}
+    <text>微信客服</text>
+    <view> {{wx}}
+    </view>
+
+
+    <text>QQ客服</text>
+    <view> {{qq}}
     </view>
 
     <text>电子邮件</text>

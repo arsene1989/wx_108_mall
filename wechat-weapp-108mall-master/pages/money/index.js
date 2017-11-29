@@ -1,16 +1,11 @@
-// pages/person/person.js
-var app = getApp()
+// pages/money/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    telephone: "",
-    name: "",
-    cert: "",
-    bank_account: "",
-    bank_open: ""
+  
   },
 
   /**
@@ -31,16 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this
-
-    that.setData({
-      telephone: app.globalData.telephone,
-      name: app.globalData.name,
-      bank_account: app.globalData.bank_account,
-      cert:app.globalData.cert,
-      bank_open:app.globalData.bank_open
-    })
-    
+  
   },
 
   /**
@@ -76,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  to_person_setting: function () {
-    wx.navigateTo({
-      url: '../personsetting/index',
-    })
   }
 })

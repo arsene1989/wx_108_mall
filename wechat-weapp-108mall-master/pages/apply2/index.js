@@ -11,8 +11,8 @@ Page({
     telephone:"",
     name:"",
     cert:"",
-    bank_account:""
-  
+    bank_account:"",
+    bank_open:""
   },
 
   /**
@@ -79,7 +79,7 @@ Page({
   }, 
 
   applyForTwo: function (e) {
-    if (e.detail.value.name.length == 0 || e.detail.value.cert.length == 0 || e.detail.value.bank.length == 0 || e.detail.value.phone.length == 0 ) {
+    if (e.detail.value.name.length == 0 || e.detail.value.cert.length == 0 || e.detail.value.bank.length == 0 || e.detail.value.phone.length == 0 || e.detail.value.open.length == 0) {
       wx.showModal({
         title: '请完善您的个人信息',
         content: '',
@@ -97,7 +97,7 @@ Page({
                  app.globalData.cert =
                    e.detail.value.cert ;
                  app.globalData.bank_account = e.detail.value.bank;
-
+                 app.globalData.bank_open = e.detail.value.open;
           app.globalData.store_level = 2
 
           wx.navigateBack()
@@ -113,6 +113,7 @@ Page({
         name: e.detail.value.name,
         cert: e.detail.value.cert,
         bank_account: e.detail.value.bank,
+        bank_open:e.detail.value.open
       })
     }
   }

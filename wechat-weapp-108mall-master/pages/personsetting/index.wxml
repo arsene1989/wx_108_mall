@@ -17,6 +17,11 @@
     </view>
 
     <view class="info_cell">
+        <text class="info_title" >开户网点</text>
+        <input class="info_content" name="open" placeholder= "请输入您的银行开户网点" type="number" maxlength="100" value='{{bank_open}}'></input>
+    </view>
+
+    <view class="info_cell">
         <text class="info_title" >手机号码</text>
         <input class="info_content" name="phone"  placeholder= "请输入您的手机号码" type="number" maxlength="11" value='{{telephone}}'></input>
     </view>

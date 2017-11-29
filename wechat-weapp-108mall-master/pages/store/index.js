@@ -101,7 +101,13 @@ Page({
       wx.navigateTo({
         url: '../mystore/index',
       })
-    }
+    },
+
+    to_money: function () {
+      wx.navigateTo({
+        url: '../money/index',
+      })
+    },
 
 
 })

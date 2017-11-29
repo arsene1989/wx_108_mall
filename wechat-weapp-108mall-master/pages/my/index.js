@@ -41,8 +41,16 @@ Page( {
   },
 
   to_download: function () {
+    
     wx.navigateTo({
       url: '../download/index',
+    })
+  },
+
+  to_money: function () {
+
+    wx.navigateTo({
+      url: '../money/index',
     })
   },
 

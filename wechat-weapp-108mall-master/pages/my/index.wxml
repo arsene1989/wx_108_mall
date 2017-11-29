@@ -52,6 +52,14 @@
 
 </block>
 
+
+<view class='setting_line'></view>
+
+<view class='setting_item' bindtap='to_money'>
+   <text class='setting_text'>账户余额</text>
+   <image class='arrow' mode='widthFix'
+   src='../../images/arrow.png'></image>
+</view>
 <view class='setting_line'></view>
 
 <view class='setting_item' bindtap='to_about_us'>

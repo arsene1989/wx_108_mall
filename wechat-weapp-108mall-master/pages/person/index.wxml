@@ -16,6 +16,11 @@
     </view>
 
     <view class="info_cell">
+        <text class="info_title">银行开户网点</text>
+        <text class="info_content">{{bank_open}}</text>
+    </view>
+
+    <view class="info_cell">
         <text class="info_title">手机号码</text>
         <text class="info_content">{{telephone}}</text>
     </view>

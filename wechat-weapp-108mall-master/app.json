@@ -14,7 +14,8 @@
     "pages/seller/index",
     "pages/person/index",
     "pages/personsetting/index",
-    "pages/paysuccess/index"
+    "pages/paysuccess/index",
+    "pages/money/index"
   ],
   "window": {
     "backgroundTextStyle": "white",
