@@ -1,2 +1,22 @@
-<!--pages/money/index.wxml-->
-<text>pages/money/index.wxml</text>
+<view class="container">
+  
+  <view class='offical_container' bindtap='to_offical'>{{money}}</view>
+
+
+<view class='recharge_button' bindtap='to_recharge'>
+   <text class='recharge_text'>充值</text>
+</view>
+
+<view class='line'></view>
+
+<view class='recharge_button' bindtap='to_recharge'>
+   <text class='recharge_text'>提现</text>
+</view>
+
+<view class='line'></view>
+
+<view class='recharge_button' bindtap='to_details'>
+   <text class='recharge_text'>明细</text>
+</view>
+
+</view>

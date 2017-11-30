@@ -1,1 +1,33 @@
-/* pages/money/index.wxss */
+@import '/style/layout.wxss';
+.container {
+  background-color: #F2f2f2;
+}
+
+.money_container {
+  background-color: lightblue;
+  text-align: left;
+  color: white;
+  width: 100%;
+  height: 100pt;
+}
+
+.recharge_button {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 35pt;
+  background-color: #FFFFFF;
+}
+
+.recharge_text {
+  color: #000000;
+  padding-left: 5pt;
+  width: 30%;
+}
+
+.line {
+  width: 100%;
+  height: 1pt;
+  background-color: #F2f2f2;
+}

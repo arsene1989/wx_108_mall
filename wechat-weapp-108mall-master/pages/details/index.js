@@ -1,4 +1,4 @@
-// pages/download/index.js
+// pages/details/index.js
 Page({
 
   /**
@@ -62,8 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-
-  
+  }
 })

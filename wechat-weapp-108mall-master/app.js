@@ -44,6 +44,6 @@ App({
     cert: "",
     bank_account: "",
     bank_open:"",
-    money:""
+    money:95.27
   }
 })
