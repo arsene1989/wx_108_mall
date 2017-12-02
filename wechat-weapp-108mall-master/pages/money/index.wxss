@@ -1,4 +1,6 @@
 @import '/style/layout.wxss';
+
+@import '/style/modal.wxss';
 .container {
   background-color: #F2f2f2;
 }

@@ -1,22 +1,44 @@
 <view class="container">
+
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title">用户登录</view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">账号</label>  
+      <input class="input_base input_h30 col-1" name="phone" value="{{phone}}" bindinput="binphone" type="digit"></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">密码</label>  
+      <input class="input_base input_h30 col-1" name="password" value="{{password}}" bindinput="binpassword" type="digit"></input>  
+    </view>  
+     
+  </view>  
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+</view> 
   
   <view class='offical_container' bindtap='to_offical'>{{money}}</view>
 
 
-<view class='recharge_button' bindtap='to_recharge'>
+<view class='recharge_button' bindtap='powerDrawer' data-statu='open'>
    <text class='recharge_text'>充值</text>
 </view>
 
 <view class='line'></view>
 
-<view class='recharge_button' bindtap='to_recharge'>
+<view class='recharge_button' bindtap='powerDrawer' data-statu='open'>
    <text class='recharge_text'>提现</text>
 </view>
 
 <view class='line'></view>
 
 <view class='recharge_button' bindtap='to_details'>
-   <text class='recharge_text'>明细</text>
+   <text class='recharge_text' data-statu='open'>明细</text>
 </view>
 
 </view>

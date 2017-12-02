@@ -163,6 +163,7 @@ justify-content: center;
 }
 
 .middle_text_disabled {
+   opacity: 0;
    text-align: center;
    align-content: center;
    align-items: center;
@@ -171,7 +172,6 @@ justify-content: center;
    font-size: 12px;
    width: 28px;
    height: 26px;
-   opacity: 0;
 } 
 
 .summary {
@@ -212,5 +212,8 @@ justify-content: center;
   color: white;
   background-color: #CD9967;
 }
+
+
+ 
 
 
