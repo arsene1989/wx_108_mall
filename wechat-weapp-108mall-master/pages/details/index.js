@@ -5,7 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    details: [{
+      date: '2017-6-15',
+      exchange_type: '提现',
+      balance: 123.89,
+      exchange: 9
+    }, {
+      date: '2017-8-16',
+      exchange_type: '充值',
+      balance: 123.89,
+      exchange: 9
+    }, {
+      date: '2017-8-16',
+      exchange_type: '充值',
+      balance: 123.89,
+      exchange: 90
+    }, {
+      date: '2017-8-16',
+      exchange_type: '充值',
+      balance: 123.89,
+      exchange: 9527
+    }, {
+      date: '2017-8-16',
+      exchange_type: '提现',
+      balance: 123.89,
+      exchange: 778
+    }, {
+      date: '2017-8-16',
+      exchange_type: '提现',
+      balance: 123.89,
+      exchange: 3
+    }, {
+      date: '2017-8-16',
+      exchange_type: '充值',
+      balance: 123.89,
+      exchange: 3.24
+    }]
   },
 
   /**

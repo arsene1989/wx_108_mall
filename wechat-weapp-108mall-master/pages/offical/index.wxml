@@ -1,6 +1,6 @@
 <view class="container">
 
-<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<view class="drawer_screen" bindtap="cancelModal" data-statu="close" wx:if="{{showModalStatus}}"></view> 
 
 <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
   
@@ -8,16 +8,13 @@
   <view class="drawer_title">输入数量</view>  
   <view class="drawer_content">  
     <view class="top grid">  
-      <label class="title col-0">账号</label>  
-      <input class="input_base input_h30 col-1" name="phone" value="{{phone}}" bindinput="binphone" type='digit'></input>  
-    </view>  
-    <view class="top grid">  
-      <label class="title col-0">密码</label>  
-      <input class="input_base input_h30 col-1" name="password" value="{{password}}" bindinput="binpassword" type='digit'></input>  
-    </view>  
-     
+      <input class="input_base input_h30 col-1" name="number" value="{{number}}" bindinput="good_number" type='digit'>
+      </input>  
+    </view>   
   </view>  
-  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+  <view class="btn_ok" bindtap="closeModal" data-statu="close" >确定</view> 
+
+  <view class="btn_cancel" bindtap="cancelModal" data-statu="close" >取消</view>  
 </view> 
 
 
@@ -37,7 +34,7 @@
     <!-- 减号 -->  
     <image class="{{item.minusStatus}}" bindtap="bindMinus" data-index="{{index}}" src="../../images/minus.png" mode="widthFix"></image>
     <!-- 数值 -->     
-    <view type="number" class='{{item.countStatus}}' bindtap='powerDrawer' data-statu='open' data-index="{{index}}" >{{item.count}}
+    <view type="number" class='{{item.countStatus}}' bindtap='openModal' data-statu='open' data-index="{{index}}" >{{item.count}}
     </view> 
     <!-- 加号 -->  
     <image class="normal" bindtap="bindPlus" data-index="{{index}}" src="../../images/plus.png" mode="widthFix"></image>
@@ -60,10 +57,5 @@
 <button class="pay" formType="submit">支付</button>
 </view>
 </form>
-
-
-
-
-
 
 </view>

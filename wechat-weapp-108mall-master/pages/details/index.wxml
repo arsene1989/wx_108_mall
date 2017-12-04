@@ -1,1 +1,36 @@
+<view class="container"> 
 
+<block wx:if="{{details.length>0}}">
+
+<scroll-view scroll-y class="transactions" >
+<block wx:for="{{details}}" xw:for-item="item">
+<view class="detail_item">
+
+  <view class='detail_left_container'>
+    <view class='detail_exchange_type'>{{item.exchange_type}}</view>
+    <view class='detail-exchange'>{{item.exchange}}元</view>
+  
+  </view>
+
+  <view class='detail_right_container'>
+  
+  <view class='detail_time'>{{item.date}}</view>
+    <view class='detail_balance'>余额:{{item.balance}}</view>
+  
+  </view>
+
+    
+    
+ </view>
+ </block>
+</scroll-view>
+
+</block>
+
+<block wx:else> 
+
+<view class='empty_container'>空空如也~</view>
+
+</block>
+
+</view>

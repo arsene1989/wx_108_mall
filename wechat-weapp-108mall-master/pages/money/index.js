@@ -8,7 +8,9 @@ Page({
   data: {
     userInfo: {},
     money:0,
-    showModalStatus: false
+    showModalStatus: false,
+    moneyway:'',
+    exchange:0.0
   },
 
   /**
@@ -89,31 +91,59 @@ Page({
   },
 
   withdraw: function () {
+    var exchange = this.data.exchange;
     wx.showModal({
-      title: '提现',
-      content: '请您输入提现金额',
+      title: '注意',
+      content: '您提现' + exchange + '元，1到3个工作日到账',
     })
   },
 
   recharge: function () {
+    var exchange = this.data.exchange;
     wx.showModal({
-      title: '充值',
-      content: '请您输入充值金额',
+      title: '注意',
+      content: exchange + '元充值成功',
     })
   },
-  powerDrawer: function (e) {
+
+  openModal : function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
     console.log(currentStatu);
+    var moneyway = e.currentTarget.dataset.name;
+    console.log(moneyway);
+    this.setData({
+      moneyway: moneyway
+    })
     this.util(currentStatu)
   },
 
-  binphone: function (e) {
-    console.log(e.detail.value)
 
+  closeModal : function (e) {
+    var currentStatu = e.currentTarget.dataset.statu;
+    console.log(currentStatu);
+    this.util(currentStatu);
+    var moneyway = this.data.moneyway;
+    var exchange = this.data.exchange;
+    console.log(exchange);
+    console.log(moneyway);
+    if (moneyway == '提现') {
+      this.withdraw(exchange);
+    } else {
+      this.recharge(exchange);
+    }
   },
 
-  binpassword: function (e) {
-    console.log(e.detail.value)
+  cancelModal : function(e) {
+    var currentStatu = e.currentTarget.dataset.statu;
+    console.log(currentStatu);
+    this.util(currentStatu);
+  },
+
+  exchange: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      exchange: parseFloat(e.detail.value).toFixed(2)
+    })
   },
 
   util: function (currentStatu) {

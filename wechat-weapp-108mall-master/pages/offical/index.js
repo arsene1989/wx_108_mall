@@ -32,7 +32,9 @@ minusStatus: 'disabled',
  countStatus: 'middle_text_disabled',
     }],
     summary:0,
-    showModalStatus: false
+    showModalStatus: false,
+    currentNumber:0,
+    currentIndex:0
   },
 
   /**
@@ -110,7 +112,7 @@ minusStatus: 'disabled',
     console.log('减1', e.currentTarget.dataset.index);
     var index = e.currentTarget.dataset.index;
     var num = this.data.goods_info[index].count;
-    var current_price = parseFloat(this.data.goods_info[index].price).toFixed(2)
+    var current_price = parseFloat(this.data.goods_info[index].price).toFixed(2);
     // 如果大于1时，才可以减  
     if (num > 0) {
       num--;
@@ -161,13 +163,6 @@ minusStatus: 'disabled',
     this.sum_up();
   },
 
-  inputNumber : function (e) {
-    wx.showModal({
-      title: '输入数量',
-      content: '',
-    })
-  },
-
   pay: function(){
     var sum = this.data.summary;
     if(sum > 0){
@@ -182,11 +177,6 @@ minusStatus: 'disabled',
 
         },
         "fail": function (res) {
-          // wx.showModal({
-          //   title: '支付失败',
-          //   content: '',
-          //   showCancel: false
-          // })
 
           wx.navigateTo({
             url: '../paysuccess/index',
@@ -208,21 +198,58 @@ minusStatus: 'disabled',
 
   },
 
-
-  powerDrawer: function (e) {
-
+  openModal: function(e) {
     var currentStatu = e.currentTarget.dataset.statu;
-    console.log(currentStatu);
-    this.util(currentStatu)
+    var index = e.currentTarget.dataset.index;
+    this.setData({
+      currentIndex: index,
+    })
+    this.util(currentStatu);
   },
 
-  binphone: function (e) {
-    console.log(e.detail.value)
+  closeModal: function(e) {
+    var currentStatu = e.currentTarget.dataset.statu;
+    var currentIndex = this.data.currentIndex;
+    var currentNumber = this.data.currentNumber;
+
+    // var index = e.currentTarget.dataset.index;
+    var num = this.data.goods_info[currentIndex].count;
+    var current_price = parseFloat(this.data.goods_info[currentIndex].price).toFixed(2)
+    // 不作过多考虑自增1  
+    num = currentNumber;
+    // 只有大于一件的时候，才能normal状态，否则disable状态  
+    var minusStatus = num <= 0 ? 'disabled' : 'normal';
+    var count_status = num <= 0 ? 'middle_text_disabled' : 'middle_text';
+    console.info(num, minusStatus);
+    // 将数值与状态写回  
+    var param = {};
+    var count = "goods_info[" + currentIndex + "].count";
+    var status = "goods_info[" + currentIndex + "].minusStatus";
+    var countStatus = "goods_info[" + currentIndex + "].countStatus";
+    var price = "goods_info[" + currentIndex + "].price";
+    param[count] = num;
+    param[status] = minusStatus;
+    param[price] = current_price;
+    param[countStatus] = count_status;
+    console.info(param);
+    this.setData(param);
+
+    this.sum_up();
+    this.util(currentStatu);
   },
 
-  binpassword: function (e) {
-    console.log(e.detail.value)
+  cancelModal: function(e) {
+    var currentStatu = e.currentTarget.dataset.statu;
+    this.util(currentStatu);
   },
+
+  good_number: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      currentNumber: e.detail.value
+    })
+  },
+
 
   util: function (currentStatu) {
     /* 动画部分 */

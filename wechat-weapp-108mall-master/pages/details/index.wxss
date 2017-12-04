@@ -1,1 +1,51 @@
-/* pages/details/index.wxss */
+@import '/style/layout.wxss';
+.container {
+  background-color: #F2f2f2;
+}
+
+.detail_item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40pt;
+   background-color: #FFFFFF; 
+   border-bottom-color: gray; 
+}
+
+.detail_time {
+  padding: 2pt;
+  font-size: 12pt;
+  color: gray;
+}
+
+.detail_exchange {
+  padding: 2pt;
+  color: gray;
+}
+
+.detail_exchange_type {
+  padding: 2pt;
+  color: gray;
+}
+
+.detail_balance {
+  padding: 2pt;
+  color: black;
+}
+
+.detail_left_container {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail_right_container {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
