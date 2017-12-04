@@ -8,7 +8,7 @@ Page({
   data: {
     goods_info: [{
       icon: '../../images/coin.png',
-      price: 5.07,
+      price: 0.01,
       count: 0,
 minusStatus: 'disabled',
       countStatus: 'middle_text_disabled',
@@ -169,17 +169,22 @@ minusStatus: 'disabled',
       var timestamp = Date.parse(new Date());
       wx.requestPayment({
         "timeStamp": timestamp,
-        "nonceStr": "",
-        "package": "",
+        "nonceStr": "wxc8f32ff46c0f44a7",
+        "package": "prepay_id=95123123",
         "signType": "MD5",
-        "paySign": "",
+        "paySign": "EED93E66EE577383E7D94CA98F9F1701",
         "success": function (res) {
+          wx.navigateTo({
+            url: '../paysuccess/index',
+          })
 
         },
         "fail": function (res) {
 
-          wx.navigateTo({
-            url: '../paysuccess/index',
+          wx.showModal({
+            title: '支付失败',
+            content: '请稍后再试',
+            showCancel: false
           })
 
         },

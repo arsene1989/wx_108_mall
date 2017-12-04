@@ -16,8 +16,7 @@
     "pages/personsetting/index",
     "pages/paysuccess/index",
     "pages/money/index",
-    "pages/details/index",
-    "pages/modal/index"
+    "pages/details/index"
   ],
   "window": {
     "backgroundTextStyle": "white",
