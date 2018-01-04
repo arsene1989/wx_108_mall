@@ -7,7 +7,6 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs) 
-    
   },
   getUserInfo:function(cb){
     var that = this
@@ -23,31 +22,42 @@ App({
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
+              console.log('userInfo', res.userInfo)
               typeof cb == "function" && cb(that.globalData.userInfo)
               console.log('res', res)
               if(code) {
+                console.log('that.globalData.code',code)
                 wx.request({
                   //获取openid接口  
-                  url: 'https://api.weixin.qq.com/sns/jscode2session',
+                  url: 'http://api.108fj.com/account/wechat',
                   data: {
-                    appid: 'wxc8f32ff46c0f44a7',
-                    secret: '1bf6489da0fae7f171c824e21f04bb99',
-                    js_code: code,
-                    grant_type: 'authorization_code'
+                    code: code
                   },
-                  method: 'GET',
+                  method: 'POST',
                   success: function (res) {
-                    console.log('res', res)
-                    wx.showToast({
-                      title: 'res', res,
-                    })
-
-                    var OPEN_ID = res.data.openid;//获取到的openid  
-                    var SESSION_KEY = res.data.session_key;//获取到session_key
-                    console.log('OPEN_ID', OPEN_ID)
-                    console.log('SESSION_KEY', SESSION_KEY)
+                    console.log('登录108获取数据', res)
                   }
                 })
+                
+                // var url = 'https://api.weixin.qq.com/sns/jscode2session?appid=' + this.globalData.appid + '&secret=' + this.globalData.secret + '&js_code=' + code + '&grant_type=authorization_code'
+
+                // wx.request({
+                //   url: url,
+                //   data:{
+                //   },
+                //   method:'POST',
+                //   success: function (res) {
+                //     console.log('登录108获取数据', res)
+                //     var obj = {};
+                //     obj.openid = res.data.openid;
+                //     obj.expires_in = Date.now() + res.data.expires_in;
+                //     //console.log(obj);  
+                //     wx.setStorageSync('user', obj);//存储openid 
+                //   }
+
+                // })
+
+
               } else {
                 wx.showToast({
                   title: 'code不存在',
@@ -80,6 +90,8 @@ App({
     bank_open:"",
     money:95.27,
     open_id:"",
-    session_key:""
+    session_key:"",
+    secert:"1fda04e998453b1e6cfdd5e51b5fc7dd",
+    appid:"wx7c2a3d2b1d636cdc"
   }
 })
